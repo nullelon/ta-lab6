@@ -13,5 +13,5 @@ type ITree interface {
 	fmt.Stringer
 	insert(v Comparable) *UnbalancedTree
 	delete(v Comparable)
-	find(v Comparable)
+	find(v Comparable) interface{}
 }
