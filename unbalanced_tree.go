@@ -32,11 +32,8 @@ func (t *UnbalancedTree) delete(v Comparable) {
 
 	lessParent := tree
 	less := tree.Left
-	fmt.Println(less.isEmpty())
-	fmt.Println(less.Right.isEmpty())
-	fmt.Println(less.Right.Right.isEmpty())
 	for {
-		if !less.isEmpty() && !less.Right.isEmpty() && less.Right.Right != nil {
+		if !less.isEmpty() && less.Right != nil && less.Right.Right != nil {
 			lessParent = less
 			less = less.Right
 		} else {
@@ -44,7 +41,7 @@ func (t *UnbalancedTree) delete(v Comparable) {
 		}
 	}
 
-	lessParent.Right = less.Left
+	lessParent.Left = less.Right
 
 	tree.Value = less.Value
 
