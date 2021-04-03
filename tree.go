@@ -6,6 +6,7 @@ import (
 
 type Comparable interface {
 	Less(a interface{}) bool
+	Equals(a interface{}) bool
 }
 
 type ITree interface {

@@ -7,3 +7,7 @@ type element struct {
 func (e *element) Less(a interface{}) bool {
 	return e.value < a.(element).value
 }
+
+func (e *element) Equals(a interface{}) bool {
+	return e.value == a.(element).value
+}
