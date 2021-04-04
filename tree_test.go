@@ -25,3 +25,14 @@ func TestUnbalancedTree(t *testing.T) {
 
 	fmt.Println(tree)
 }
+
+func TestRBTree(t *testing.T) {
+	tree := NewRedBlackTree(&element{50})
+	fmt.Println(tree)
+
+	fmt.Println(tree.find(&element{50}))
+	fmt.Println(tree.find(&element{500}))
+	fmt.Println(tree.find(&element{5000}))
+
+	fmt.Println(tree)
+}
