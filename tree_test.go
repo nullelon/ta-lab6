@@ -27,36 +27,48 @@ func TestUnbalancedTree(t *testing.T) {
 }
 
 func TestRBTree(t *testing.T) {
-	tree := NewRedBlackTree(&element{50})
+	tree := NewWithIntComparator()
 	fmt.Println(tree)
 
-	tree.insert(&element{5})
+	tree.insert(5)
 	fmt.Println(tree)
 
-	tree.insert(&element{10})
+	tree.insert(10)
 	fmt.Println(tree)
 
-	tree.insert(&element{15})
+	tree.insert(15)
 	fmt.Println(tree)
 
-	tree.insert(&element{7})
+	tree.insert(7)
 	fmt.Println(tree)
 
-	tree.insert(&element{4})
+	tree.insert(4)
 	fmt.Println(tree)
 
-	tree.insert(&element{2})
+	tree.insert(2)
 	fmt.Println(tree)
 
-	tree.insert(&element{8})
+	tree.insert(8)
 	fmt.Println(tree)
 
-	tree.insert(&element{7})
+	tree.insert(7)
 	fmt.Println(tree)
 
-	tree.insert(&element{222})
+	tree.insert(0)
 	fmt.Println(tree)
 
-	tree.insert(&element{0})
+	fmt.Println("___")
+	fmt.Println(tree)
+
+	tree.delete(7)
+	fmt.Println(tree)
+
+	tree.delete(10)
+	fmt.Println(tree)
+
+	tree.delete(2)
+	fmt.Println(tree)
+
+	tree.delete(8)
 	fmt.Println(tree)
 }
